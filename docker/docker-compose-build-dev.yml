@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  cra-boilerplate-dev-build:
+    build:
+      context: ../
+      dockerfile: ./dev.docker
+    image: registry.gitlab.com/blackit/cra-boilerplate/dev:latest
+    container_name: cra-boilerplate-dev-build
+    hostname: app.hi5ve.co
+    command: echo "Done!"
+
+#    ports:
+#      - 80:80
+#      - 443:443
+#    volumes:
+#      - ../funnels-app.src:/var/src/html
+#    command: cp -Rf /var/www/html /var/src
+#    volumes:
+#      - ../vendor:/var/www/vendor
+#    command: cp -Rf /var/www/html/vendor /var/www
+s

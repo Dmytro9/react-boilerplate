@@ -1,0 +1,25 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: front
+  namespace: production
+  labels:
+    app: front
+    account.name: pasechnik_lab
+spec:
+  ports:
+    - name: http1
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31184
+  selector:
+    app: front
+  clusterIP: 10.11.249.127
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+status:
+  loadBalancer:
+    ingress:
+      - ip: 35.225.83.1

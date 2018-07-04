@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto+Slab');
+
+.quote-modal {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.loader {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.trader-up button {
+  border: 1px solid transparent;
+  background-color: #00cd7a;
+}
+
+.trader-zero button {
+  color: #5d7079;
+  border: 1px solid #5d7079;
+  background-color: transparent;
+}
+
+.trader-down button {
+  border: 1px solid transparent;
+  background-color: #fe7575;
+}
+
+.triangle {
+  position: relative;
+  top: 0;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 7px;
+  border-left-width: 7px;
+  border-top: 7px solid #fe7575;
+}
+
+.trader-table .fa-caret-up {
+  color: #00cd7a;
+  font-size: 1.4rem;
+  margin-top: -6px;
+}
+
+.trader-table .fa-caret-down {
+  color: #fe7575;
+  font-size: 1.4rem;
+}
+
+.trader-table .trader-up {
+  color: #00cd7a;
+}
+
+.trader-table .trader-down {
+  color: #fe7575;
+}
+
+.quote-modal .confirm-btn {
+  color: black;
+  background-color: #ffed1f;
+  border: none;
+  border-radius: 20px; 
+}
+
+.quote-modal .resend-btn {
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 20px; 
+}
+
+.quote-modal .verify-phone_text {
+  font-size: 13px;
+}
+
+.quote-modal {
+  max-width: 674px;
+}
+
+.trader_nested-modal {
+  max-width: 800px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.trader_nested-modal .modal-header {
+  display: block;
+  text-align: center;
+}
+
+.trader_nested-modal .quote_close-btn {
+  float: right;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.trader_nested-modal .modal-header {
+  justify-content: center;
+  border: none;
+}
+
+.trader_nested-modal .modal-footer {
+  border: none;
+}
+
+.quote-modal .modal-body {
+  padding: 0;
+}
+
+.quote-modal .modal-content {
+  padding: 1rem 1.4rem;
+}
+
+.quote-modal table {
+  margin-bottom: 0;
+}
+
+.quote-modal a:hover {
+  text-decoration: none; 
+}
+
+.quote_close-btn {
+  color: #545b62;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.quote_back-btn {
+  color: #545b62;
+  font-size: 26px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.quote_back-btn.btn-secondary:not(:disabled):not(.disabled):hover,
+.quote_back-btn.btn-secondary:not(:disabled):not(.disabled):active,
+.quote_back-btn.btn-secondary:not(:disabled):not(.disabled):active:focus {
+  background-color: transparent;
+  color: #4e555b;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.quote_back-btn.btn-secondary:not(:disabled):not(.disabled):hover {
+  color: #007bff;
+}
+
+.quote_back-btn.btn-secondary:focus {
+  box-shadow: none;
+}
+
+.quote-modal .quote_code-h4 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.quote-modal .modal-footer {
+  justify-content: flex-start;
+  font-size: 13px;
+  color: #536469;
+  padding: 1rem 0 0;
+  margin-top: 10px;
+}
+
+.quote-modal .modal-footer a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.quote-modal .modal-footer span:hover {
+  text-decoration: none;
+}
+
+.active-sell.btn,
+.active-buy.btn {
+  border: 1px solid transparent;
+  background-color: #00cd7a;
+}
+
+.no-active.btn {
+  color: #5d7079;
+  border: 1px solid #5d7079;
+  background-color: transparent;
+}
+
+/* Range */
+.form-range {
+  margin: 0 auto;
+  padding: 100px 30px 0;
+  }
+  
+.input-range {
+  margin-bottom: 160px;
+}
+  
+.input-range__track--background {
+  left: 0;
+  margin-top: -0.15rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.input-range {
+  height: 1rem;
+  position: relative;
+  width: 100%;
+  margin: 50px 0 40px;
+}
+
+.input-range__track {
+  background: #000;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  display: block;
+  height: 0.2rem;
+  position: relative;
+  -webkit-transition: left 0.1s ease-out, width 0.1s ease-out;
+  transition: left 0.1s ease-out, width 0.1s ease-out;
+}
+
+.input-range__slider-container {
+  -webkit-transition: left 0.1s ease-out;
+  transition: left 0.1s ease-out;
+}
+
+.input-range__slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 1.6rem;
+  margin-left: -0.5rem;
+  margin-top: -0.9rem;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: box-shadow 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, -webkit-transform 0.1s ease-out;
+  width: 1.6rem;
+}
+
+.input-range__slider:after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  margin-top: 8px;
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  margin-top: -2px;
+}
+
+.input-range__slider::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  margin-top: 8px;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  margin-top: -2px;
+}
+
+.input-range__track--active {
+  background: #e2e8ea;
+}
+
+.input-range__label.input-range__label--max,
+.input-range__label.input-range__label--min,
+.input-range__label.input-range__label--value {
+  display: none;
+}
+
+.trader_nested-modal-link {
+  font-size: 13px;
+  color: #536469;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1.5;
+  text-decoration: underline;
+  vertical-align: top;
+}
+
+.trader_nested-modal-link.btn-secondary:not(:disabled):not(.disabled):active {
+  text-decoration: none;
+  background-color: transparent;
+  color: #536469;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.trader_nested-modal-link:focus,
+.trader_nested-modal-link:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #536469;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.trader-table_header {
+  margin-bottom: 10px;
+}
+
+.trader-table button span {
+  font-size: 14px;
+}
+
+.quote-order_container button span {
+  font-size: 14px;
+}
+
+.quote-modal_chevron {
+  display: block;
+  margin-top: -7px;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.quote-modal .react-phone-number-input__icon-image {
+  vertical-align: top;
+}
+
+.quote-modal .react-phone-number-input__icon--international {
+  width: calc(1em + 2px);
+  height: calc(1em + 2px);
+}
+
+.quote-modal input[type='password']::placeholder {
+  color: #eee;
+}
+
+.quote-modal input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Media */
+@media(max-width: 767.98px) {
+  .quote-modal {
+    max-width: 500px;
+    margin: 0.5rem auto;
+  }
+
+  .quote-modal .modal-content {
+    padding: 1rem 1rem;
+  }
+
+  .trader-table button {
+    font-size: 13px;
+  }
+
+  .trader-table .col-4 {
+    padding-right: 10px;
+  }
+
+  .trader-pair_symbol {
+    font-size: 11px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .trader-table_header {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .modal-dialog.trader_nested-modal {
+    font-size: 14px;
+  }
+
+  .trader-table button span {
+    font-size: 11px;
+  }
+}

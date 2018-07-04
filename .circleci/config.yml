@@ -1,0 +1,113 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - save_cache:
+          paths:
+            - build
+          key: v1-build-{{ .Environment.CIRCLE_SHA1 }}
+
+  package-branch:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - run:
+          name: Update PATH and Define Environment Variable at Runtime
+          command: |
+            echo 'export COMMIT_TAG=$(eval echo ${CIRCLE_BRANCH} | sed s#/#-#g )'>> $BASH_ENV
+            source $BASH_ENV
+      - run: echo $COMMIT_TAG
+      - setup_remote_docker
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-build-{{ .Environment.CIRCLE_SHA1 }}
+          - v1-build-
+      - run: docker info
+      - run: docker build --rm=false -t registry.gitlab.com/blackit/cra-boilerplate/circle:$COMMIT_TAG .
+      - run: docker login $DOCKER_REGISTRY -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+      - run: docker push registry.gitlab.com/blackit/cra-boilerplate/circle:$COMMIT_TAG
+
+#      - run: docker build --rm=false -t registry.gitlab.com/blackit/cra-boilerplate/circle:$COMMIT_TAG .
+  package-branch-tagged:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - setup_remote_docker
+      - checkout
+      - run: echo $CIRCLE_TAG
+      - restore_cache:
+          keys:
+          - v1-build-{{ .Environment.CIRCLE_SHA1 }}
+          - v1-build-
+      - run: docker info
+      - run: docker build --rm=false -t registry.gitlab.com/blackit/cra-boilerplate/circle:$CIRCLE_TAG .
+      - run: docker login $DOCKER_REGISTRY -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+      - run: docker push registry.gitlab.com/blackit/cra-boilerplate/circle:$CIRCLE_TAG
+
+  package-branch-master:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - setup_remote_docker
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-build-{{ .Environment.CIRCLE_SHA1 }}
+          - v1-build-
+      - run: docker info
+      - run: docker build --rm=false -t registry.gitlab.com/blackit/cra-boilerplate/circle:latest .
+      - run: docker login $DOCKER_REGISTRY -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+      - run: docker push registry.gitlab.com/blackit/cra-boilerplate/circle:latest
+
+workflows:
+  version: 2
+  build_test_package:
+    jobs:
+      - build
+      - package-branch:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: master
+            tags:
+              ignore: /^v.*/
+      - package-branch-master:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - package-branch-tagged:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*/

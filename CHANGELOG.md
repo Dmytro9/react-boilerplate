@@ -1,0 +1,156 @@
+## 0.2.1 (June 11, 2018)
+  - Merged master
+  - up to 0.2.1
+  - Merge branch 'feature/version' into 'master'
+
+## 0.2.0 (June 11, 2018)
+  - display  version in about page
+  - use api keyword for api proxy path
+
+## 0.1.1 (June 11, 2018)
+
+
+## 0.1.0 (June 11, 2018)
+  - up to 0.0.2
+  - add version
+  - do not use buffer for api proxy
+  - use proxy for api
+  - eslint fix
+  - eslint
+  - fix
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - Merge branch 'master' into dpoliuliuk/BR-190
+  - Merge branch 'gh-master'
+  - fix UI
+  - add http
+  - Set theme jekyll-theme-slate
+  - Merge branch 'feature/root'
+  - small
+  - add docs to ci
+  - docs folder for pages
+  - pages
+  - use host
+  - Merge branch 'feature/root' into 'master'
+  - fix docker auth
+  - Merge branch 'feature/root' into 'master'
+  - gitlab pages
+  - changes to ci - do everything in docker
+  - new docker build
+  - remove folder
+  - Merge branch 'master' into dpoliuliuk/BR-190
+  - server func
+  - Merge branch 'feature/analytics' into 'master'
+  - fix nginx error handler
+  - add Google Analytics
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - fix _blank a
+  - fix
+  - fix styling phone verification screen
+  - styling and phone validation
+  - styling and phone validation
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - BR-190: --lint-fix
+  - Merge branch 'master' into dpoliuliuk/BR-190
+  - BR-190: symbols order
+  - use ws sockets
+  - Merge branch 'master' into dpoliuliuk/BR-190
+  - fix timer error
+  - use wss
+  - Merge branch 'feature/build' into 'master'
+  - Merge branch 'master' into feature/build
+  - remove snapshots from build
+  - change yarn.lock
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - BR-190: socket observable
+  - Merge branch 'dpoliuliuk/BR-190' of gitlab.com:blackit/cra-boilerplate into dpoliuliuk/BR-190
+  - BR-190: socket observable
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - Merge branch 'master' into dpoliuliuk/BR-190
+  - BR-190: fix links relatively fix prop types
+  - codefresh deploy
+  - BR-190: fix links relatively the selected operation buy / sell
+  - BR-190: added 2 routes
+  - yarn.lock
+  - Merge branch 'feature/new_docker'
+  - docker uses cra-boilerplate  path
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - BR-190: styling
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - BR-190: styling
+  - Merge branch 'dpoliuliuk/BR-190' into 'master'
+  - BR-190: fix lint
+  - BR-190: implementation 2 slides
+  - BR-190: set up actions and reducers, make view layout
+  - BR-190: optimizing sever app
+  - BR-190: optimizing sever app
+  - BR-190: optimizing sever app
+  - BR-190: optimizing sever app
+  - BR-190: set up server file: request to forex api
+  - BR-190: set up server file: request to forex api
+  - BR-190: set up client and server websockets
+  - add helmet
+  - gh-pages
+  - add base to router
+  - add snapshot
+  - lint fix
+  - fix lint warning
+  - image: node:alpine for all-in-one job
+  - node image
+  - remove other stages
+  - all-in-one stage
+  - rm policy
+  - cache
+  - use node_modules as cache key
+  - add the-utils
+  - changes
+  - pipeline changes
+  - starting work on modules
+  - Merge branch 'feature/add-options'
+  - fix reactstrap version
+  - Merge branch 'feature/add-options'
+  - add other options
+  - syntax sugar
+  - Update README.md
+  - Analyzing the Bundle Size & Code splitting supported
+  - Analyzing the Bundle Size & Code splitting supported
+  - Merge branch 'master' of https://github.com/mohandere/cra-boilerplate
+  - Analyzing the Bundle Size & Code splitting supported
+  - Merge pull request #3 from cbschuld/master
+  - removed toastr from boilerplate
+  - fixed link
+  - eslint
+  - react-router entry removed
+  - gitignore .css generated from the .scss files
+  - readme updates
+  - issue fix
+  - 1.0.2
+  - doc updated
+  - package json
+  - test cases
+  - boostrap v4 updated
+  - boostrap v4 updated
+  - boostrap v4
+  - gh-pages removed
+  - demo added
+  - doc updated
+  - doc updated
+  - examples added
+  - test suit
+  - travis
+  - sample files
+  - sample files
+  - sample files
+  - sample files
+  - doc updated
+  - doc updated
+  - doc updated
+  - doc updated
+  - doc updated
+  - soc
+  - soc
+  - doc updated
+  - doc updated
+  - Merge branch 'master' of https://github.com/mohandere/cra-boilerplate
+  - basic setup
+  - Initial commit
+

@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test
+  namespace: production
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+  - secretName: tls-certificate
+  backend:
+    serviceName: front
+    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front
+          servicePort: 80
+      - path: /api
+        backend:
+          serviceName: back
+          servicePort: 80
+  - host: appshub.ll
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front
+          servicePort: 80
+      - path: /api
+        backend:
+          serviceName: back
+          servicePort: 80
+  - host: www.appshub.ll
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front
+          servicePort: 80
+      - path: /api
+        backend:
+          serviceName: back
+          servicePort: 80
+  - host: api.appshub.ll
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: back
+          servicePort: 80

@@ -1,0 +1,29 @@
+FROM node:alpine
+
+MAINTAINER Volodymyr Pasichnyk <vladimir.pasechnik@gmail.com>
+
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json /app/
+
+RUN npm install --no-optional --silent
+
+ADD ./ /app
+ENV HOST "0.0.0.0"
+ENV PORT "3000"
+ENV NODE_ENV "dev"
+EXPOSE 3000
+
+
+#RUN
+#RUN apk update && apk add --update --no-cache alpine-sdk python && \
+
+#RUN apk add --update --no-cache alpine-sdk python && \
+#    python -m ensurepip && \
+#    rm -r /usr/lib/python*/ensurepip && \
+#    pip install --upgrade pip setuptools && \
+#    rm -r /root/.cache && \
+#    npm install --no-optional  --silent && \
+#    npm run robocss && npm run bootstrap && npm run deploy:prod
+
+CMD ["npm", "start"]

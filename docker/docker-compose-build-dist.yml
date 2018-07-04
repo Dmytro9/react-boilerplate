@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  cra-boilerplate-dist-build:
+    build:
+      context: ../
+      dockerfile: ./Dockerfile
+    image: registry.gitlab.com/blackit/cra-boilerplate/dist:latest
+    container_name: cra-boilerplate-dist-build
+    hostname: app.hi5ve.co
+    command: echo "Done!"
+
+#    ports:
+#      - 80:80
+#      - 443:443
+#    volumes:
+#      - ../funnels-app.src:/var/src/html
+#    command: cp -Rf /var/www/html /var/src
+#    volumes:
+#      - ../vendor:/var/www/vendor
+#    command: cp -Rf /var/www/html/vendor /var/www
