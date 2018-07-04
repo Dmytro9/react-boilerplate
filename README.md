@@ -38,7 +38,7 @@ Before starting with project, please headover to [CRA](https://github.com/facebo
 
 1. Clone this repo
 
-`https://github.com/mohandere/cra-boilerplate.git`
+`git@github.com:Dmytro9/react-boilerplate.git`
 
 2. To run, go to project folder and run
 
