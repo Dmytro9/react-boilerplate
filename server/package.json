@@ -1,0 +1,45 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node --presets=latest",
+    "start:dev": "better-npm-run start:dev",
+    "build": "babel src -d dist"
+  },
+  "betterScripts": {
+    "start:dev": {
+      "command": "nodemon --exec npm run babel-node -- ./proxy.js",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-npm-run": "^0.1.0",
+    "bluebird": "^3.5.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "redis": "^2.8.0",
+    "socket.io": "^2.1.1",
+    "the-utils": "^0.5.7",
+    "ws": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.17.4",
+    "request-promise-native": "^1.0.5"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
+}

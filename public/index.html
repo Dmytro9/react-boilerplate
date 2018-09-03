@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="minitrader"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script>
+    // miniwebtrader call
+    var vMinitrader = { login_qty: 1 };
+    vMinitrader.current_user = { ID: 0 };
+
+    vMinitrader.current_user.id = 1;
+    vMinitrader.current_user.email = 'test@gmail.com'
+
+    vMinitrader.login_qty = 1
+    // vMinitrader.current_user = {"data":{"ID":"462","user_login":"dmytro.poliuliuk@innovecs.com","user_pass":"+NCmVhCUfTigvP5i5cdqXG4u+KRkWABl6u2vrZEsEKhkD6EMngbM5S6siv85\/QeyDq4D\/eVQiMPIT4nT6qk=","user_nicename":"dmytro-poliuliukinnovecs-com","user_email":"dmytro.poliuliuk@innovecs.com","user_url":"","user_registered":"2018-03-14 13:10:07","user_activation_key":"1521033007:$P$B3D7Wh7QCIpTik4we6HG5RSMC376XT0","user_status":"0","display_name":"Dmytro Poliuliuk","avatar":"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw\/eHBhY2tldCBiZWdpbj0i77u\/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNzBmNTczMS0yMjA2LWZjNDEtOTU0Mi02MjA4OTE4YmExMDMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDM5N0Q0OTY5OUU2MTFFNzgyNjE4RjIyMEFDQzM2MTMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDM5N0Q0OTU5OUU2MTFFNzgyNjE4RjIyMEFDQzM2MTMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjcwZjU3MzEtMjIwNi1mYzQxLTk1NDItNjIwODkxOGJhMTAzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI3MGY1NzMxLTIyMDYtZmM0MS05NTQyLTYyMDg5MThiYTEwMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI\/PoDeCPoAAAQHSURBVHjavJhXTFNhFMdPb2mLQCuKE3CAA0cciWhwD5xxRH3QOKOixqTqi\/qGGlf0UWNMRKMhjri30TgwwThIcOHEFU0AUaIoVCi14\/r\/8F6psS33XAon+YWEfuN\/v3G+c47BnNCfdFgfkA6GgO6gA4hRfvsJisAbcA\/kgGfcCQwMYWLi5SAD9GLO8xIcAPsU4WERFgHsYD2Io4bZN7AF7AGehgjrBo6BARReewjmgLd6hE0BR4GNGsccYC64HOhHo9HWLtD\/54HjoBk1nlnALPABPNWyYtPAWSGamsa8YCa4GEpYCsgHVmpaE9s6ELwOJEzcvrxGOOicC5Gm3tYIvx\/sekQtn+Wi9DQPde3kpZgoohoXDk2xRLn5Jso6aaZqp0HrUGLulWCn\/4oJ5\/mR46c6xvvo1M4q6pnsDdrmU5lE89ZF08MXRo6f6yycsKR+OEeULUam3EOOkKKExbfx0a1sB3XCR2i0OEULqcIyONu3ebWT4mJlbW8ednJ3ZjVn+Ax1K\/vib4HWXhHYlXfXK6hlc5l1FpPHNaev3zWft35ixcZwJoiOkinWKrOvXEJbH6d5uqRcUc32s8pAn79KLFEeHMXSMlafNNG6J8tN48OfFPIehVfvjVRWbuB06SGEJXC3RfgqXnsDe+cl7vPTvbOXZox1s2YZ2MdDowZ5OF2sEvdTIs1\/XADXhO\/jmKQ8oJrt6Rsj5T+LYE1SgoOfk8fq4xDCSrhfP2FpDBVovADFXyRKm22lqmrWMpcIYYVcYeL6H7lk1tT2Sq6JKhzsvS+UlFCHbRdyTOTT4DOzz5n1DJ8nKXkf24STXbk1KmSb7fsi6flbXYFwjhr2vNCRK9ba66uV1L71\/0vnhneIHxFLrl\/sIUUO2lt1Fwf1hp2eEO7JaJT1DHnQP+zJUoI0liXiYU5sF\/igmeAdenXxcYcsV7T8FSbS9q3cUTbYa0I628wVTu6QW9QSgn9e+QBMFoGnlphsxxonLZoR+gAlJfpqnzAR\/2t4Lx+DZcDHTt+aRcq0YNovWjXfxQmXqbzCQHuOWmj\/aQv9qAwoUKxSarD0LWjCO2GYm6aOdtPE4W5q01LWe09qHe21Oya6cttE5+v8oKaEV7X5wjdiq4z2uS5KSfKGPYksKpWQ3lm8WScsi+FSDmsqqkwe6aaN9prpPZK9h\/0KcuE2sX0L8cCf27Y3ko5cNIcuqqxdUoOsxkmtWsjiDT0DhoL2YRb1CIwHd23Rcu1CiOTmxj1T8BWrfPAjWOFuI2jRQEHfwaZghTtbauw\/8Vi9zh3sErdfLKgI4XUIeqX0TVLGqjec\/W\/FxNtnja735oni8FgwmOqKw1a\/yo1aHL4PbpKG4rAD2VfKpLoa4W8BBgA2UidjOsX+cgAAAABJRU5ErkJggg=="},"ID":462,"caps":{"administrator":true},"cap_key":"wp_capabilities","roles":["administrator"],"allcaps":{"switch_themes":true,"edit_themes":true,"activate_plugins":true,"edit_plugins":true,"edit_users":true,"edit_files":true,"manage_options":true,"moderate_comments":true,"manage_categories":true,"manage_links":true,"upload_files":true,"import":true,"unfiltered_html":true,"edit_posts":true,"edit_others_posts":true,"edit_published_posts":true,"publish_posts":true,"edit_pages":true,"read":true,"level_10":true,"level_9":true,"level_8":true,"level_7":true,"level_6":true,"level_5":true,"level_4":true,"level_3":true,"level_2":true,"level_1":true,"level_0":true,"edit_others_pages":true,"edit_published_pages":true,"publish_pages":true,"delete_pages":true,"delete_others_pages":true,"delete_published_pages":true,"delete_posts":true,"delete_others_posts":true,"delete_published_posts":true,"delete_private_posts":true,"edit_private_posts":true,"read_private_posts":true,"delete_private_pages":true,"edit_private_pages":true,"read_private_pages":true,"delete_users":true,"create_users":true,"unfiltered_upload":true,"edit_dashboard":true,"update_plugins":true,"delete_plugins":true,"install_plugins":true,"update_themes":true,"install_themes":true,"update_core":true,"list_users":true,"remove_users":true,"promote_users":true,"edit_theme_options":true,"delete_themes":true,"export":true,"wpml_manage_translation_management":true,"wpml_manage_languages":true,"wpml_manage_theme_and_plugin_localization":true,"wpml_manage_support":true,"wpml_manage_woocommerce_multilingual":true,"wpml_operate_woocommerce_multilingual":true,"wpml_manage_media_translation":true,"wpml_manage_navigation":true,"wpml_manage_sticky_links":true,"wpml_manage_string_translation":true,"wpml_manage_translation_analytics":true,"wpml_manage_wp_menus_sync":true,"wpml_manage_taxonomy_translation":true,"wpml_manage_troubleshooting":true,"wpml_manage_translation_options":true,"administrator":true},"filter":null}        window.minitrader.current_user.id = 462 
+    vMinitrader.current_user.email = "dmytro.poliuliuk@innovecs.com"
+
+    window.vMinitrader = vMinitrader
+    var phone = "380635181429"
+    vMinitrader.current_user.phone = (phone.charAt(0) !== '+' && phone.length > 1) ? '+' + phone : phone
+    vMinitrader.funnel = "the-tesler"
+  </script>
+
+</body>
+
+</html>

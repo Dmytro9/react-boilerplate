@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  cra-boilerplate-dev:
+    image: registry.gitlab.com/blackit/cra-boilerplate/dev:latest
+    container_name: cra-boilerplate-dev
+    hostname: dev.hi5ve.co
+    ports:
+      - 3000:3000
+    volumes:
+      - ../src:/app/src
+      - ../.env:/app/.env
+
+#    command: cp -Rf /var/www/html /var/src
+#    volumes:
+#      - ../vendor:/var/www/vendor
+#    command: cp -Rf /var/www/html/vendor /var/www

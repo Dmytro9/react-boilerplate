@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  cra-boilerplate-dist:
+    image: registry.gitlab.com/blackit/cra-boilerplate/dist:latest
+    container_name: cra-boilerplate-dist
+    hostname: app.hi5ve.co
+    ports:
+      - 80:80
+      - 443:443
